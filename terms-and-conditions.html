@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms &amp; Conditions — StepReward: Walk &amp; Rewards</title>
+<style>
+  :root {
+    --ink: #10201b;
+    --ink-soft: #4b5b54;
+    --ink-faint: #7c887f;
+    --paper: #f6f7f3;
+    --panel: #ffffff;
+    --line: #dde3dd;
+    --accent: #146356;
+    --accent-bright: #1c8a74;
+    --accent-wash: #e7f0ec;
+    --amber: #a6650a;
+    --amber-wash: #faf1de;
+    --red: #a13f2e;
+    --red-wash: #fbeeea;
+    --sidebar-w: 268px;
+    --max-w: 1120px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.7;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .topbar {
+    height: 5px;
+    background: linear-gradient(90deg, var(--accent) 0%, var(--accent-bright) 60%, var(--amber) 100%);
+  }
+
+  .shell {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: var(--sidebar-w) 1fr;
+    gap: 48px;
+    padding: 44px 28px 100px;
+    align-items: start;
+  }
+
+  /* ---------- Sidebar ---------- */
+  aside.rail {
+    position: sticky;
+    top: 28px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .mark {
+    flex: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mark svg { width: 20px; height: 20px; }
+
+  .brand-name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+    color: var(--ink);
+  }
+
+  .brand-name span {
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--ink-faint);
+    margin-top: 1px;
+  }
+
+  details.toc {
+    border-top: 1px solid var(--line);
+    padding-top: 18px;
+  }
+
+  details.toc summary {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--ink-faint);
+    cursor: pointer;
+    list-style: none;
+    margin-bottom: 14px;
+  }
+  details.toc summary::-webkit-details-marker { display: none; }
+  details.toc summary::after {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-right: 1.5px solid var(--ink-faint);
+    border-bottom: 1.5px solid var(--ink-faint);
+    transform: rotate(45deg);
+    margin-left: 6px;
+    transition: transform 0.15s ease;
+  }
+  details.toc[open] summary::after { transform: rotate(-135deg); }
+
+  .toc ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    counter-reset: toc;
+  }
+
+  .toc li {
+    counter-increment: toc;
+    margin-bottom: 2px;
+  }
+
+  .toc a {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    text-decoration: none;
+    padding: 6px 8px;
+    border-radius: 5px;
+  }
+
+  .toc a::before {
+    content: counter(toc, decimal-leading-zero);
+    font-variant-numeric: tabular-nums;
+    color: var(--accent);
+    font-size: 11.5px;
+    font-weight: 700;
+    flex: none;
+  }
+
+  .toc a:hover { background: var(--accent-wash); color: var(--ink); }
+
+  .sibling-doc {
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+  }
+
+  .sibling-doc a {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: var(--accent);
+    text-decoration: none;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--panel);
+  }
+  .sibling-doc a:hover { border-color: var(--accent); }
+  .sibling-doc .eyebrow {
+    display: block;
+    color: var(--ink-faint);
+    font-size: 11px;
+    margin-bottom: 3px;
+  }
+
+  /* ---------- Main content ---------- */
+  main { min-width: 0; }
+
+  header.doc-header {
+    margin-bottom: 8px;
+  }
+
+  header.doc-header h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: -0.02em;
+    line-height: 1.12;
+    margin: 0 0 10px;
+  }
+
+  header.doc-header .sub {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--ink-soft);
+    font-size: 15.5px;
+    margin: 0 0 18px;
+  }
+
+  .stamp {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12.5px;
+    letter-spacing: 0.02em;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 5px;
+    padding: 5px 11px;
+  }
+
+  hr.rule {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 32px 0 8px;
+  }
+
+  section.numbered {
+    counter-increment: section;
+    padding-top: 34px;
+    margin-bottom: 6px;
+  }
+
+  section.numbered + section.numbered {
+    border-top: 1px solid var(--line);
+  }
+
+  section.numbered h2 {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: -0.01em;
+    margin: 0 0 18px;
+  }
+
+  section.numbered h2::before {
+    content: counter(section, decimal-leading-zero);
+    font-family: 'Courier New', Courier, monospace;
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--accent);
+    background: var(--accent-wash);
+    border-radius: 4px;
+    padding: 3px 7px;
+  }
+
+  p { margin: 0 0 15px; }
+
+  ul { margin: 0 0 15px; padding-left: 22px; }
+  li { margin-bottom: 7px; }
+
+  strong { color: var(--ink); }
+  a.inline { color: var(--accent); }
+
+  .callout {
+    background: var(--accent-wash);
+    border-left: 3px solid var(--accent);
+    padding: 15px 18px;
+    border-radius: 0 6px 6px 0;
+    font-size: 15.5px;
+    margin: 0 0 16px;
+  }
+  .callout strong { color: var(--accent); }
+
+  .warn {
+    background: var(--red-wash);
+    border-left: 3px solid var(--red);
+    padding: 15px 18px;
+    border-radius: 0 6px 6px 0;
+    font-size: 15.5px;
+    margin: 0 0 16px;
+    color: #6b2a1e;
+  }
+
+  .back-to-top {
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.5px;
+    color: var(--ink-faint);
+    text-decoration: none;
+    margin-top: 6px;
+  }
+  .back-to-top:hover { color: var(--accent); }
+
+  .disclaimer {
+    margin-top: 10px;
+    padding: 20px 22px;
+    background: var(--amber-wash);
+    border-left: 3px solid var(--amber);
+    border-radius: 0 6px 6px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13.5px;
+    color: #5a4326;
+    line-height: 1.65;
+  }
+
+  .contact-box {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 20px 22px;
+    display: grid;
+    gap: 14px;
+  }
+  .contact-box .label {
+    color: var(--ink-faint);
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  footer.page-footer {
+    margin-top: 54px;
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.5px;
+    color: var(--ink-faint);
+  }
+
+  body { counter-reset: section; }
+
+  @media (max-width: 900px) {
+    .shell {
+      grid-template-columns: 1fr;
+      padding: 28px 20px 70px;
+      gap: 22px;
+    }
+    aside.rail { position: static; }
+    header.doc-header h1 { font-size: 30px; }
+  }
+
+  @media print {
+    .rail, .back-to-top, .topbar { display: none; }
+    .shell { display: block; padding: 0; }
+    body { background: #fff; }
+  }
+</style>
+</head>
+<body>
+<div class="topbar"></div>
+<div class="shell">
+
+  <aside class="rail">
+    <div class="brand">
+      <div class="mark">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 3.5C9 3.5 7 5.7 7 8.2c0 3.3 3.4 5.8 5 9.3 1.6-3.5 5-6 5-9.3 0-2.5-2-4.7-5-4.7Z" stroke="#f6f7f3" stroke-width="1.4"/>
+          <circle cx="12" cy="8.4" r="1.6" fill="#f6f7f3"/>
+        </svg>
+      </div>
+      <div class="brand-name">StepReward
+        <span>Walk &amp; Rewards</span>
+      </div>
+    </div>
+
+    <details class="toc" open>
+      <summary>On this page</summary>
+      <ol id="top">
+        <li><a href="#acceptance">Acceptance of Terms</a></li>
+        <li><a href="#description">Description of Service</a></li>
+        <li><a href="#eligibility">Eligibility &amp; Age Requirements</a></li>
+        <li><a href="#account">Account Registration &amp; Security</a></li>
+        <li><a href="#points">Virtual Points/Coins Disclaimer</a></li>
+        <li><a href="#redemption">Rewards, Scratch Cards &amp; Redemption</a></li>
+        <li><a href="#referral">Referral Program Terms</a></li>
+        <li><a href="#prohibited">Prohibited Conduct</a></li>
+        <li><a href="#advertising">Advertising Disclosure</a></li>
+        <li><a href="#health-disclaimer">Health &amp; Fitness Disclaimer</a></li>
+        <li><a href="#ip">Intellectual Property</a></li>
+        <li><a href="#termination">Termination &amp; Suspension</a></li>
+        <li><a href="#warranties">Disclaimer of Warranties</a></li>
+        <li><a href="#liability">Limitation of Liability</a></li>
+        <li><a href="#indemnification">Indemnification</a></li>
+        <li><a href="#governing-law">Governing Law &amp; Jurisdiction</a></li>
+        <li><a href="#changes">Changes to These Terms</a></li>
+        <li><a href="#contact">Contact Information</a></li>
+        <li><a href="#disclaimer">Legal Disclaimer</a></li>
+      </ol>
+    </details>
+
+    <div class="sibling-doc">
+      <a href="privacy-policy.html">
+        <span class="eyebrow">Also read</span>
+        Privacy Policy →
+      </a>
+    </div>
+  </aside>
+
+  <main>
+    <header class="doc-header">
+      <h1>Terms &amp; Conditions</h1>
+      <p class="sub">The rules for using StepReward: Walk &amp; Rewards, including rewards, redemptions, and conduct.</p>
+      <span class="stamp">Last Updated · September 8, 2026</span>
+    </header>
+
+    <hr class="rule">
+
+    <section class="numbered" id="acceptance">
+      <h2>Acceptance of Terms</h2>
+      <p>These Terms and Conditions ("Terms") govern your access to and use of StepReward: Walk &amp; Rewards (the "App"), developed and operated by RH Studio PK, an independent developer based in Pakistan ("we," "us," "our"). By downloading, installing, or using the App, you agree to be bound by these Terms and by our Privacy Policy. If you do not agree, please do not use the App.</p>
+      <a class="back-to-top" href="#top">↑ Back to contents</a>
+    </section>
+
+    <section class="numbered" id="description">
+      <h2>Description of Service</h2>
+      <p>StepReward is a step-counter and walk-tracking rewards application, made available to users worldwide. The App reads your step activity from your device's step sensor and/or Android's Health Connect platform and converts eligible steps and daily check-ins into in-app points and coins. Points and coins can be used to play randomized "scratch card" style features that credit a virtual cash balance, which users may request to redeem through supported redemption partners. Available redemption destinations and any local payment/wallet options are shown based on the country you select and may differ by region. The App also includes an optional referral program and displays optional advertising.</p>
+      <a class="back-to-top" href="#top">↑ Back to contents</a>
+    </section>
+
+    <section class="numbered" id="eligibility">
+      <h2>Eligibility &amp; Age Requirements</h2>
+      <p>You must be at least 13 years old to create an account and use the App, or the minimum age of digital consent in your country if that age is higher than 13. To request redemption of virtual cash balance for any cash-equivalent reward, you must additionally be at least 18 years old, or have reached the age of legal majority in your jurisdiction, and have the legal capacity to enter into these Terms. By using the App, you represent that you meet these requirements.</p>
+      <a class="back-to-top" href="#top">↑ Back to contents</a>
+    </section>
+
+    <section class="numbered" id="account">
+      <h2>Account Registration &amp; Security</h2>
+      <p>You must sign in using a valid Google account to create an App account. You are solely responsible for maintaining the confidentiality and security of your account credentials and for all activity that occurs under your account. Each person may hold only <strong>one</strong> App account; creating or using multiple accounts is a violation of these Terms (see the Prohibited Conduct section). You agree to notify us promptly of any unauthorized use of your account.</p>
+      <a class="back-to-top" href="#top">↑ Back to contents</a>
+    </section>
+
+    <section class="numbered" id="points">
+      <h2>Virtual Points/Coins Disclaimer</h2>
+      <div class="callout">
+        Points and coins earned within the App are virtual items with <strong>no cash value on their own</strong>. They cannot be purchased with real money, sold, exchanged, or transferred outside the App, whether to another user or to any third party.
+      </div>
+      <p>Points and coins may only be used within the App as designed (for example, to play scratch-card features). We reserve the right to adjust, reset, expire, or revoke points, coins, or virtual cash balances in the event of suspected fraud, abuse, a violation of these Terms, or a technical error, at our reasonable discretion.</p>
+      <a class="back-to-top" href="#top">↑ Back to contents</a>
+    </section>
+
+    <section class="numbered" id="redemption">
+      <h2>Rewards, Scratch Cards &amp; Redemption Terms</h2>
+      <p>Virtual cash balances accumulated in the App may be redeemed through supported redemption partners, subject to the following:</p>
+      <ul>
+        <li>All redemption requests are <strong>manually reviewed and approved</strong> by RH Studio PK; redemptions are not instant or automatic.</li>
+        <li>There is no guaranteed processing timeline, and payouts may be delayed for review, verification, or operational reasons.</li>
+        <li>We reserve the right to deny, delay, or reverse any redemption request that appears fraudulent, suspicious, or in violation of these Terms.</li>
+        <li>Minimum redemption thresholds may apply and may change from time to time.</li>
+        <li>You are solely responsible for the accuracy of the payout details you submit (such as an email address linked to a payment account, or a phone number, wallet name, and account holder name for mobile-wallet top-ups). RH Studio PK is not responsible for payouts misdirected due to incorrect information you provided.</li>
+        <li>Scratch-card outcomes are randomized; we make no guarantee of any particular result or payout amount.</li>
+      </ul>
+      <a class="back-to-top" href="#top">↑ Back to contents</a>
+    </section>
+
+    <section class="numbered" id="referral">
+      <h2>Referral Program Terms</h2>
+      <p>Users may share a personal referral code to earn additional rewards when new users sign up using that code. Referral rewards are subject to the eligibility criteria in effect at the time of referral, may be modified or discontinued at any time, and will not be credited for referrals obtained through fraudulent means, including self-referral, fake accounts, or incentive schemes not authorized by us.</p>
+      <a class="back-to-top" href="#top">↑ Back to contents</a>
+    </section>
+
+    <section class="numbered" id="prohibited">
+      <h2>Prohibited Conduct</h2>
+      <p>You agree not to, and not to assist any other person to:</p>
+      <ul>
+        <li>Manipulate or falsify step counts, including through GPS-spoofing tools, step-spoofing applications, emulators, bots, scripts, or any other automated or artificial means;</li>
+        <li>Create or operate more than one account, or create fake or impersonated accounts;</li>
+        <li>Engage in any form of fraud, including submitting false payout details or attempting to redeem rewards obtained through prohibited means;</li>
+        <li>Reverse-engineer, decompile, or tamper with the App or attempt to bypass its security or reward-calculation mechanisms;</li>
+        <li>Use the App in any way that violates applicable law or infringes the rights of others.</li>
+      </ul>
+      <div class="warn">Violation of this section may result in forfeiture of points, coins, or virtual cash balance, denial of pending redemption requests, and immediate suspension or termination of your account.</div>
+      <a class="back-to-top" href="#top">↑ Back to contents</a>
+    </section>
+
+    <section class="numbered" id="advertising">
+      <h2>Advertising Disclosure</h2>
+      <p>The App displays optional rewarded ads and occasional app-open ads delivered through a third-party advertising SDK. Viewing ads may be required to unlock certain optional in-app rewards. Advertising content is provided by third-party advertising networks, and we do not control, and are not responsible for, the content of individual advertisements.</p>
+      <a class="back-to-top" href="#top">↑ Back to contents</a>
+    </section>
+
+    <section class="numbered" id="health-disclaimer">
+      <h2>Health &amp; Fitness Disclaimer</h2>
+      <p>Step counts and activity data displayed in the App are estimates generated by your device's sensors and/or the Android Health Connect platform. They are <strong>not medical-grade measurements</strong> and are not intended to diagnose, treat, cure, or prevent any disease or health condition. The App is not a substitute for professional medical advice, and you should consult a qualified healthcare provider regarding any health or fitness concerns before beginning or changing any physical activity routine.</p>
+      <a class="back-to-top" href="#top">↑ Back to contents</a>
+    </section>
+
+    <section class="numbered" id="ip">
+      <h2>Intellectual Property</h2>
+      <p>The App, including its design, graphics, text, software, and all associated intellectual property, is owned by RH Studio PK or its licensors and is protected by applicable copyright, trademark, and other intellectual property laws. We grant you a limited, non-exclusive, non-transferable, revocable license to use the App for your personal, non-commercial use in accordance with these Terms. You may not copy, modify, distribute, sell, or lease any part of the App without our prior written consent.</p>
+      <a class="back-to-top" href="#top">↑ Back to contents</a>
+    </section>
+
+    <section class="numbered" id="termination">
+      <h2>Termination &amp; Suspension of Accounts</h2>
+      <p>We may suspend or terminate your account and access to the App, with or without notice, if we reasonably believe you have violated these Terms, engaged in fraudulent or abusive conduct, or for any other reason at our discretion, including discontinuation of the App. Upon termination, any unredeemed points, coins, or virtual cash balance may be forfeited, except where prohibited by applicable law.</p>
+      <a class="back-to-top" href="#top">↑ Back to contents</a>
+    </section>
+
+    <section class="numbered" id="warranties">
+      <h2>Disclaimer of Warranties</h2>
+      <p>The App is provided on an <strong>"as is"</strong> and <strong>"as available"</strong> basis, without warranties of any kind, whether express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, non-infringement, or that the App will be uninterrupted, error-free, or secure. We do not warrant that step tracking, reward calculations, or redemption processing will be accurate or free of technical error at all times.</p>
+      <a class="back-to-top" href="#top">↑ Back to contents</a>
+    </section>
+
+    <section class="numbered" id="liability">
+      <h2>Limitation of Liability</h2>
+      <p>To the maximum extent permitted by applicable law, RH Studio PK shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of data, revenue, or virtual rewards, arising out of or related to your use of, or inability to use, the App, even if we have been advised of the possibility of such damages. Our total aggregate liability for any claim arising from these Terms or the App shall not exceed the greater of the amount you have redeemed through the App in the preceding six months, or a nominal amount, to the extent permitted by law.</p>
+      <a class="back-to-top" href="#top">↑ Back to contents</a>
+    </section>
+
+    <section class="numbered" id="indemnification">
+      <h2>Indemnification</h2>
+      <p>You agree to indemnify, defend, and hold harmless RH Studio PK and its developer from and against any claims, liabilities, damages, losses, and expenses, including reasonable legal fees, arising out of or in any way connected with your violation of these Terms, your misuse of the App, or your violation of any applicable law or third-party right.</p>
+      <a class="back-to-top" href="#top">↑ Back to contents</a>
+    </section>
+
+    <section class="numbered" id="governing-law">
+      <h2>Governing Law &amp; Jurisdiction</h2>
+      <p>These Terms shall be governed by and construed in accordance with the laws of Pakistan, without regard to its conflict-of-law principles. You agree that any dispute arising out of or relating to these Terms or the App shall be subject to the exclusive jurisdiction of the courts of Pakistan.</p>
+      <a class="back-to-top" href="#top">↑ Back to contents</a>
+    </section>
+
+    <section class="numbered" id="changes">
+      <h2>Changes to These Terms</h2>
+      <p>We may modify these Terms from time to time. When we do, we will update the "Last Updated" date at the top of this page and, for material changes, make reasonable efforts to notify you (for example, via an in-app notice). Your continued use of the App after any change constitutes your acceptance of the revised Terms.</p>
+      <a class="back-to-top" href="#top">↑ Back to contents</a>
+    </section>
+
+    <section class="numbered" id="contact">
+      <h2>Contact Information</h2>
+      <p>If you have questions about these Terms, please contact us:</p>
+      <div class="contact-box">
+        <div><span class="label">Developer</span>RH Studio PK</div>
+        <div><span class="label">Support Email</span><a class="inline" href="mailto:riderhunter301@gmail.com">riderhunter301@gmail.com</a></div>
+        <div><span class="label">Official Website</span><a class="inline" href="https://rhstudio.rh.gd">https://rhstudio.rh.gd</a></div>
+      </div>
+      <a class="back-to-top" href="#top">↑ Back to contents</a>
+    </section>
+
+    <section class="numbered" id="disclaimer">
+      <h2>Legal Disclaimer</h2>
+      <div class="disclaimer">
+        These Terms and Conditions are provided as a general template and do not constitute legal advice. They have been drafted to reflect the features of StepReward: Walk &amp; Rewards as described by the developer, but laws and regulatory requirements vary by jurisdiction and change over time. RH Studio PK should have this document reviewed by a qualified lawyer familiar with the laws of Pakistan (and any other jurisdiction in which the App is offered) before relying on it as a final, legally binding agreement.
+      </div>
+    </section>
+
+    <footer class="page-footer">
+      © 2026 RH Studio PK — StepReward: Walk &amp; Rewards. All rights reserved.
+    </footer>
+  </main>
+
+</div>
+</body>
+</html>
