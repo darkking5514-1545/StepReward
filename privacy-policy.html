@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — StepReward: Walk &amp; Rewards</title>
+<style>
+  :root {
+    --ink: #10201b;
+    --ink-soft: #4b5b54;
+    --ink-faint: #7c887f;
+    --paper: #f6f7f3;
+    --panel: #ffffff;
+    --line: #dde3dd;
+    --accent: #146356;
+    --accent-bright: #1c8a74;
+    --accent-wash: #e7f0ec;
+    --amber: #a6650a;
+    --amber-wash: #faf1de;
+    --sidebar-w: 268px;
+    --max-w: 1120px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.7;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .topbar {
+    height: 5px;
+    background: linear-gradient(90deg, var(--accent) 0%, var(--accent-bright) 60%, var(--amber) 100%);
+  }
+
+  .shell {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: var(--sidebar-w) 1fr;
+    gap: 48px;
+    padding: 44px 28px 100px;
+    align-items: start;
+  }
+
+  /* ---------- Sidebar ---------- */
+  aside.rail {
+    position: sticky;
+    top: 28px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .mark {
+    flex: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mark svg { width: 20px; height: 20px; }
+
+  .brand-name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+    color: var(--ink);
+  }
+
+  .brand-name span {
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--ink-faint);
+    margin-top: 1px;
+  }
+
+  details.toc {
+    border-top: 1px solid var(--line);
+    padding-top: 18px;
+  }
+
+  details.toc summary {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--ink-faint);
+    cursor: pointer;
+    list-style: none;
+    margin-bottom: 14px;
+  }
+  details.toc summary::-webkit-details-marker { display: none; }
+  details.toc summary::after {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-right: 1.5px solid var(--ink-faint);
+    border-bottom: 1.5px solid var(--ink-faint);
+    transform: rotate(45deg);
+    margin-left: 6px;
+    transition: transform 0.15s ease;
+  }
+  details.toc[open] summary::after { transform: rotate(-135deg); }
+
+  .toc ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    counter-reset: toc;
+  }
+
+  .toc li {
+    counter-increment: toc;
+    margin-bottom: 2px;
+  }
+
+  .toc a {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    text-decoration: none;
+    padding: 6px 8px;
+    border-radius: 5px;
+  }
+
+  .toc a::before {
+    content: counter(toc, decimal-leading-zero);
+    font-variant-numeric: tabular-nums;
+    color: var(--accent);
+    font-size: 11.5px;
+    font-weight: 700;
+    flex: none;
+  }
+
+  .toc a:hover { background: var(--accent-wash); color: var(--ink); }
+
+  .sibling-doc {
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+  }
+
+  .sibling-doc a {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: var(--accent);
+    text-decoration: none;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--panel);
+  }
+  .sibling-doc a:hover { border-color: var(--accent); }
+  .sibling-doc .eyebrow {
+    display: block;
+    color: var(--ink-faint);
+    font-size: 11px;
+    margin-bottom: 3px;
+  }
+
+  /* ---------- Main content ---------- */
+  main { min-width: 0; }
+
+  header.doc-header {
+    margin-bottom: 8px;
+  }
+
+  header.doc-header h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: -0.02em;
+    line-height: 1.12;
+    margin: 0 0 10px;
+  }
+
+  header.doc-header .sub {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--ink-soft);
+    font-size: 15.5px;
+    margin: 0 0 18px;
+  }
+
+  .stamp {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12.5px;
+    letter-spacing: 0.02em;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 5px;
+    padding: 5px 11px;
+  }
+
+  hr.rule {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 32px 0 8px;
+  }
+
+  section.numbered {
+    counter-increment: section;
+    padding-top: 34px;
+    margin-bottom: 6px;
+  }
+
+  section.numbered + section.numbered {
+    border-top: 1px solid var(--line);
+  }
+
+  section.numbered h2 {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: -0.01em;
+    margin: 0 0 18px;
+  }
+
+  section.numbered h2::before {
+    content: counter(section, decimal-leading-zero);
+    font-family: 'Courier New', Courier, monospace;
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--accent);
+    background: var(--accent-wash);
+    border-radius: 4px;
+    padding: 3px 7px;
+  }
+
+  h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 15.5px;
+    color: var(--accent);
+    margin: 24px 0 8px;
+  }
+
+  p { margin: 0 0 15px; }
+
+  ul { margin: 0 0 15px; padding-left: 22px; }
+  li { margin-bottom: 7px; }
+
+  strong { color: var(--ink); }
+  a.inline { color: var(--accent); }
+
+  .callout {
+    background: var(--accent-wash);
+    border-left: 3px solid var(--accent);
+    padding: 15px 18px;
+    border-radius: 0 6px 6px 0;
+    font-size: 15.5px;
+    margin: 0 0 16px;
+  }
+
+  .callout strong { color: var(--accent); }
+
+  .back-to-top {
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.5px;
+    color: var(--ink-faint);
+    text-decoration: none;
+    margin-top: 6px;
+  }
+  .back-to-top:hover { color: var(--accent); }
+
+  .disclaimer {
+    margin-top: 10px;
+    padding: 20px 22px;
+    background: var(--amber-wash);
+    border-left: 3px solid var(--amber);
+    border-radius: 0 6px 6px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13.5px;
+    color: #5a4326;
+    line-height: 1.65;
+  }
+
+  .contact-box {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 20px 22px;
+    display: grid;
+    gap: 14px;
+  }
+  .contact-box .label {
+    color: var(--ink-faint);
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  footer.page-footer {
+    margin-top: 54px;
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.5px;
+    color: var(--ink-faint);
+  }
+
+  body { counter-reset: section; }
+
+  @media (max-width: 900px) {
+    .shell {
+      grid-template-columns: 1fr;
+      padding: 28px 20px 70px;
+      gap: 22px;
+    }
+    aside.rail { position: static; }
+    header.doc-header h1 { font-size: 30px; }
+  }
+
+  @media print {
+    .rail, .back-to-top, .topbar { display: none; }
+    .shell { display: block; padding: 0; }
+    body { background: #fff; }
+  }
+</style>
+</head>
+<body>
+<div class="topbar"></div>
+<div class="shell">
+
+  <aside class="rail">
+    <div class="brand">
+      <div class="mark">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 3.5C9 3.5 7 5.7 7 8.2c0 3.3 3.4 5.8 5 9.3 1.6-3.5 5-6 5-9.3 0-2.5-2-4.7-5-4.7Z" stroke="#f6f7f3" stroke-width="1.4"/>
+          <circle cx="12" cy="8.4" r="1.6" fill="#f6f7f3"/>
+        </svg>
+      </div>
+      <div class="brand-name">StepReward
+        <span>Walk &amp; Rewards</span>
+      </div>
+    </div>
+
+    <details class="toc" open>
+      <summary>On this page</summary>
+      <ol id="top">
+        <li><a href="#introduction">Introduction &amp; Scope</a></li>
+        <li><a href="#information-we-collect">Information We Collect</a></li>
+        <li><a href="#health-fitness">Health &amp; Fitness Data</a></li>
+        <li><a href="#how-we-use">How We Use Your Information</a></li>
+        <li><a href="#third-party">Third-Party Services We Use</a></li>
+        <li><a href="#how-we-share">How We Share Information</a></li>
+        <li><a href="#retention">Data Retention</a></li>
+        <li><a href="#security">Data Security</a></li>
+        <li><a href="#your-rights">Your Rights &amp; Choices</a></li>
+        <li><a href="#children">Children's Privacy</a></li>
+        <li><a href="#international">International Data Transfers</a></li>
+        <li><a href="#changes">Changes to This Privacy Policy</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#disclaimer">Legal Disclaimer</a></li>
+      </ol>
+    </details>
+
+    <div class="sibling-doc">
+      <a href="terms-and-conditions.html">
+        <span class="eyebrow">Also read</span>
+        Terms &amp; Conditions →
+      </a>
+    </div>
+  </aside>
+
+  <main>
+    <header class="doc-header">
+      <h1>Privacy Policy</h1>
+      <p class="sub">How StepReward: Walk &amp; Rewards collects, uses, and protects your information.</p>
+      <span class="stamp">Last Updated · September 8, 2026</span>
+    </header>
+
+    <hr class="rule">
+
+    <section class="numbered" id="introduction">
+      <h2>Introduction &amp; Scope</h2>
+      <p>RH Studio PK ("we," "us," "our," or "the developer") is an independent developer based in Pakistan that publishes and operates the mobile application <strong>StepReward: Walk &amp; Rewards</strong> (the "App," package identifier <strong>com.rhstudio.steprewards</strong>). This Privacy Policy explains what information we collect when you use the App, how we use and share that information, and the choices and rights available to you.</p>
+      <p>The App is made available to users worldwide. Some features — such as which cash-out or redemption destinations are shown to you — may vary depending on the country or region you select, but the core App and this Privacy Policy apply to all users regardless of location.</p>
+      <p>By downloading, installing, or using the App, you agree to the collection and use of information in accordance with this Privacy Policy. If you do not agree with this policy, please do not use the App.</p>
+      <a class="back-to-top" href="#top">↑ Back to contents</a>
+    </section>
+
+    <section class="numbered" id="information-we-collect">
+      <h2>Information We Collect</h2>
+
+      <h3>Account Information</h3>
+      <p>When you sign in to the App, you do so using a Google account through Firebase Authentication / Google Sign-In. This process shares the following information from your Google account with the App: your name, email address, and profile photo. We use this information solely to create and manage your in-app account.</p>
+
+      <h3>Profile Information</h3>
+      <p>During onboarding, we ask you to provide your date of birth and your country or region. Your country/region is used to determine which cash-out or redemption destinations are relevant and available to you. We also automatically detect your device's timezone to support features such as daily check-ins and streaks.</p>
+
+      <h3>Step &amp; Activity Data</h3>
+      <p>The App reads step-count data from your device's built-in step sensor and/or, where applicable, the Android Health Connect platform, which requires activity-recognition permission. A background/foreground tracking service (which may continue running after a device restart) records your step activity so that steps can be converted into in-app points. See the Health &amp; Fitness Data section below for more detail on how this data is used and your rights over it.</p>
+
+      <h3>Rewards, Transaction &amp; Redemption Data</h3>
+      <p>We collect and store data related to your in-app economy, including points, coins, scratch-card outcomes, virtual cash balance, and your redemption/payout history. When you request a redemption, you submit personal payout details directly into the App — for example, an email address linked to a payment account, or a phone number, wallet name, and account holder name for local mobile-wallet top-ups (such as JazzCash, EasyPaisa, or SadaPay). We collect and retain these payout details in order to process your request.</p>
+
+      <h3>Referral Data</h3>
+      <p>We generate a personal referral code associated with your account and track which users you have referred, so that referral rewards can be correctly credited.</p>
+
+      <h3>Device, Usage &amp; Advertising Data</h3>
+      <p>We and our third-party advertising partner collect certain device and usage information, including an advertising/device identifier, general app-usage and interaction data, and technical information (such as device model and operating system version), for the purpose of delivering optional rewarded ads and occasional app-open ads, and, where applicable, ad personalization.</p>
+
+      <h3>Notification Data</h3>
+      <p>If you grant notification permission, the App may send you local notifications, such as streak reminders. We do not need to collect additional personal information beyond the permission itself to deliver these local notifications.</p>
+      <a class="back-to-top" href="#top">↑ Back to contents</a>
+    </section>
+
+    <section class="numbered" id="health-fitness">
+      <h2>Health &amp; Fitness Data</h2>
+      <div class="callout">
+        Step and activity data collected by the App is used <strong>exclusively</strong> to calculate the in-app rewards (points and coins) you earn from walking. It is not used, analyzed, or repurposed for any medical, diagnostic, or health-monitoring purpose.
+      </div>
+      <p>We do not sell your step or activity data. We do not share this data with insurers, employers, healthcare providers, or any third party for purposes unrelated to operating the App's reward system. The App and its underlying sensors are not a medical device and are not intended to diagnose, treat, monitor, or manage any medical condition.</p>
+      <p>You may stop the collection of step and activity data at any time by revoking the App's activity-recognition or Health Connect permission through your device settings, or by disabling background tracking within the App, though doing so will prevent you from earning further step-based rewards. You may also request deletion of your historical step and activity data by contacting us using the details in the Contact Us section.</p>
+      <a class="back-to-top" href="#top">↑ Back to contents</a>
+    </section>
+
+    <section class="numbered" id="how-we-use">
+      <h2>How We Use Your Information</h2>
+      <ul>
+        <li>To create, authenticate, and maintain your App account.</li>
+        <li>To calculate step-based points and coins, and to operate check-ins, scratch cards, and other reward mechanics.</li>
+        <li>To process and review redemption/payout requests, including verifying the details you submit.</li>
+        <li>To operate the referral program and credit referral rewards.</li>
+        <li>To display which cash-out destinations are relevant to your country/region.</li>
+        <li>To deliver optional rewarded ads and app-open ads, and to measure their performance.</li>
+        <li>To send local notifications you have permitted, such as streak reminders.</li>
+        <li>To detect, investigate, and prevent fraud, abuse, and violations of our Terms and Conditions.</li>
+        <li>To maintain, secure, and improve the App's functionality and performance.</li>
+        <li>To communicate with you regarding your account, support requests, or material changes to our policies.</li>
+      </ul>
+      <a class="back-to-top" href="#top">↑ Back to contents</a>
+    </section>
+
+    <section class="numbered" id="third-party">
+      <h2>Third-Party Services We Use</h2>
+      <p>The App relies on a small number of third-party service providers to function:</p>
+      <ul>
+        <li><strong>Authentication &amp; Cloud Backend Provider:</strong> We use a cloud-based authentication and database backend (a Firebase/Firestore-style service) to sign you in and to store your profile and reward data securely.</li>
+        <li><strong>Advertising SDK:</strong> The App integrates a third-party mobile advertising SDK (such as Google AdMob) to deliver optional rewarded ads and app-open ads. This SDK may collect an advertising/device identifier for ad delivery and, where permitted, ad personalization.</li>
+        <li><strong>Device Activity Platform:</strong> Where supported, the App reads step data through Android's Health Connect platform, which is governed by its own permission controls on your device.</li>
+      </ul>
+      <p>These providers process data on our behalf and are contractually or technically restricted from using your information for purposes unrelated to providing their service to us, except as described in this Policy. We do not control the independent privacy practices of the app marketplace you downloaded this app from; please review that marketplace's own privacy terms separately.</p>
+      <a class="back-to-top" href="#top">↑ Back to contents</a>
+    </section>
+
+    <section class="numbered" id="how-we-share">
+      <h2>How We Share Information</h2>
+      <p><strong>We do not sell your personal data.</strong> We share information only in the following limited circumstances:</p>
+      <ul>
+        <li>With service providers (such as our cloud backend and advertising SDK provider) who process data on our behalf strictly to operate the App.</li>
+        <li>With supported redemption partners (such as mobile-wallet providers or payment-processing services) solely to the extent necessary to fulfill a redemption request you have submitted.</li>
+        <li>Where required to comply with applicable law, legal process, or governmental request.</li>
+        <li>To protect the rights, property, or safety of RH Studio PK, our users, or the public, including to investigate fraud or violations of our Terms.</li>
+        <li>In connection with a merger, acquisition, or transfer of business assets, subject to continued protection of your data under a policy at least as protective as this one.</li>
+      </ul>
+      <a class="back-to-top" href="#top">↑ Back to contents</a>
+    </section>
+
+    <section class="numbered" id="retention">
+      <h2>Data Retention</h2>
+      <p>We retain your account, reward, and redemption data for as long as your account remains active, and for a reasonable period afterward as needed to resolve disputes, enforce our Terms, prevent fraud, and comply with legal obligations. If you request account or data deletion, we will delete or anonymize your personal information within a reasonable timeframe, except where retention is required by law or for legitimate record-keeping related to completed transactions.</p>
+      <a class="back-to-top" href="#top">↑ Back to contents</a>
+    </section>
+
+    <section class="numbered" id="security">
+      <h2>Data Security</h2>
+      <p>We use reasonable administrative, technical, and organizational safeguards designed to protect your information from unauthorized access, alteration, disclosure, or destruction, including secure cloud infrastructure and access controls on our backend. However, no method of electronic storage or transmission is completely secure, and we cannot guarantee absolute security of your data.</p>
+      <a class="back-to-top" href="#top">↑ Back to contents</a>
+    </section>
+
+    <section class="numbered" id="your-rights">
+      <h2>Your Rights &amp; Choices</h2>
+      <ul>
+        <li><strong>Access &amp; Correction:</strong> You may request a copy of the personal information we hold about you, or ask us to correct inaccurate information, by contacting us using the details in the Contact Us section.</li>
+        <li><strong>Account &amp; Data Deletion:</strong> You may request deletion of your account and associated personal data at any time by emailing us. We will process such requests within a reasonable timeframe, subject to any legal retention requirements.</li>
+        <li><strong>Ad Personalization:</strong> You can generally limit ad tracking and personalization through your device's ad-settings (for example, by resetting or limiting your advertising identifier).</li>
+        <li><strong>Permission Controls:</strong> You may revoke activity-recognition, notification, or other permissions at any time through your device settings, which may limit certain App features.</li>
+      </ul>
+      <a class="back-to-top" href="#top">↑ Back to contents</a>
+    </section>
+
+    <section class="numbered" id="children">
+      <h2>Children's Privacy</h2>
+      <p>The App is not directed at, and is not intended for use by, children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have inadvertently collected personal information from a child under 13, we will take reasonable steps to promptly delete that information from our systems. If you believe a child under 13 has provided us with personal information, please contact us using the details in the Contact Us section.</p>
+      <a class="back-to-top" href="#top">↑ Back to contents</a>
+    </section>
+
+    <section class="numbered" id="international">
+      <h2>International Data Transfers</h2>
+      <p>Our cloud backend and other service providers may store or process data on servers located outside of Pakistan. By using the App, you understand that your information may be transferred to, and processed in, countries other than your own, which may have different data protection laws. We take reasonable steps to ensure your information continues to receive an adequate level of protection wherever it is processed.</p>
+      <a class="back-to-top" href="#top">↑ Back to contents</a>
+    </section>
+
+    <section class="numbered" id="changes">
+      <h2>Changes to This Privacy Policy</h2>
+      <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. We will update the "Last Updated" date at the top of this page whenever changes are made, and, where changes are material, we will make reasonable efforts to notify you (for example, via an in-app notice). Your continued use of the App after any update constitutes acceptance of the revised Policy.</p>
+      <a class="back-to-top" href="#top">↑ Back to contents</a>
+    </section>
+
+    <section class="numbered" id="contact">
+      <h2>Contact Us</h2>
+      <p>If you have questions, concerns, or requests regarding this Privacy Policy or your personal information, please contact us:</p>
+      <div class="contact-box">
+        <div><span class="label">Developer</span>RH Studio PK</div>
+        <div><span class="label">Support Email</span><a class="inline" href="mailto:riderhunter301@gmail.com">riderhunter301@gmail.com</a></div>
+        <div><span class="label">Official Website</span><a class="inline" href="https://rhstudio.rh.gd">https://rhstudio.rh.gd</a></div>
+      </div>
+      <a class="back-to-top" href="#top">↑ Back to contents</a>
+    </section>
+
+    <section class="numbered" id="disclaimer">
+      <h2>Legal Disclaimer</h2>
+      <div class="disclaimer">
+        This Privacy Policy is provided as a general template and does not constitute legal advice. It has been drafted to reflect the features of StepReward: Walk &amp; Rewards as described by the developer, but laws and regulatory requirements vary by jurisdiction and change over time. RH Studio PK should have this document reviewed by a qualified lawyer familiar with the laws of Pakistan (and any other jurisdiction in which the App is offered) before relying on it as a final, legally binding policy.
+      </div>
+    </section>
+
+    <footer class="page-footer">
+      © 2026 RH Studio PK — StepReward: Walk &amp; Rewards. All rights reserved.
+    </footer>
+  </main>
+
+</div>
+</body>
+</html>
