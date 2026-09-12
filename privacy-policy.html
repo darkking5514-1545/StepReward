@@ -374,6 +374,7 @@
         <li><a href="#introduction">Introduction &amp; Scope</a></li>
         <li><a href="#information-we-collect">Information We Collect</a></li>
         <li><a href="#health-fitness">Health &amp; Fitness Data</a></li>
+        <li><a href="#app-download-data">"Earn" Task Verification Data</a></li>
         <li><a href="#how-we-use">How We Use Your Information</a></li>
         <li><a href="#third-party">Third-Party Services We Use</a></li>
         <li><a href="#how-we-share">How We Share Information</a></li>
@@ -400,16 +401,15 @@
     <header class="doc-header">
       <h1>Privacy Policy</h1>
       <p class="sub">How StepReward: Walk &amp; Rewards collects, uses, and protects your information.</p>
-      <span class="stamp">Last Updated · September 8, 2026</span>
+      <span class="stamp">Last Updated · September 12, 2026</span>
     </header>
 
     <hr class="rule">
 
     <section class="numbered" id="introduction">
       <h2>Introduction &amp; Scope</h2>
-      <p>RH Studio PK ("we," "us," "our," or "the developer") is an independent developer based in Pakistan that publishes and operates the mobile application <strong>StepReward: Walk &amp; Rewards</strong> (the "App," package identifier <strong>com.rhstudio.stepreward</strong>). This Privacy Policy explains what information we collect when you use the App, how we use and share that information, and the choices and rights available to you.</p>
-      <p>The App is made available to users worldwide. Some features — such as which cash-out or redemption destinations are shown to you — may vary depending on the country or region you select, but the core App and this Privacy Policy apply to all users regardless of location.</p>
-      <p>By downloading, installing, or using the App, you agree to the collection and use of information in accordance with this Privacy Policy. If you do not agree with this policy, please do not use the App.</p>
+      <p>RH Studio PK ("we," "us," "our," or "the developer") is an independent developer based in Pakistan that publishes and operates the mobile application <strong>StepReward: Walk &amp; Rewards</strong> (the "App"). This Privacy Policy explains what information we collect when you use the App, how we use and share that information, and the choices and rights available to you.</p>
+      <p>The App is made available to users worldwide. By downloading, installing, or using the App, you agree to the collection and use of information in accordance with this Privacy Policy. If you do not agree with this policy, please do not use the App.</p>
       <a class="back-to-top" href="#top">↑ Back to contents</a>
     </section>
 
@@ -417,25 +417,28 @@
       <h2>Information We Collect</h2>
 
       <h3>Account Information</h3>
-      <p>When you sign in to the App, you do so using a Google account through Firebase Authentication / Google Sign-In. This process shares the following information from your Google account with the App: your name, email address, and profile photo. We use this information solely to create and manage your in-app account.</p>
+      <p>You can create and sign in to your App account in one of two ways: (a) using a Google account through Firebase Authentication / Google Sign-In, which shares your name, email address, and profile photo from your Google account with the App; or (b) using an email address and a password you create, in which case your password is handled directly by Firebase Authentication and is never visible to us in readable form. We use this information solely to create, authenticate, and manage your in-app account.</p>
 
       <h3>Profile Information</h3>
-      <p>During onboarding, we ask you to provide your date of birth and your country or region. Your country/region is used to determine which cash-out or redemption destinations are relevant and available to you. We also automatically detect your device's timezone to support features such as daily check-ins and streaks.</p>
+      <p>During onboarding, we ask you to provide your date of birth and your country. We also automatically detect your device's timezone to support features such as daily check-ins and streaks. If you choose to, you may upload a profile picture, which is stored on our cloud storage provider and linked to your account.</p>
+
+      <h3>Device &amp; Anti-Fraud Information</h3>
+      <p>To protect the integrity of our reward system and prevent abuse, we automatically collect a device identifier (Android's built-in device ID) and your device's public IP address when you sign up or sign in. This information is used to enforce a limit on the number of accounts that may be associated with a single physical device, and to detect and block fraudulent referral activity (for example, referrals between accounts that share the same device or the same network).</p>
 
       <h3>Step &amp; Activity Data</h3>
-      <p>The App reads step-count data from your device's built-in step sensor and/or, where applicable, the Android Health Connect platform, which requires activity-recognition permission. A background/foreground tracking service (which may continue running after a device restart) records your step activity so that steps can be converted into in-app points. See the Health &amp; Fitness Data section below for more detail on how this data is used and your rights over it.</p>
+      <p>The App reads step-count data from your device's built-in step sensor and/or, where available, the Android Health Connect platform, which requires activity-recognition permission. A background/foreground tracking service (which may continue running after a device restart) records your step activity so that steps can be converted into in-app points. Your recent step history is stored primarily on your own device, and a summary is periodically synced to our servers so your points, totals, and daily/weekly progress stay up to date across sessions. See the Health &amp; Fitness Data section below for more detail on how this data is used and your rights over it.</p>
 
       <h3>Rewards, Transaction &amp; Redemption Data</h3>
-      <p>We collect and store data related to your in-app economy, including points, coins, scratch-card outcomes, virtual cash balance, and your redemption/payout history. When you request a redemption, you submit personal payout details directly into the App — for example, an email address linked to a payment account, or a phone number, wallet name, and account holder name for local mobile-wallet top-ups (such as JazzCash, EasyPaisa, or SadaPay). We collect and retain these payout details in order to process your request.</p>
+      <p>We collect and store data related to your in-app economy, including points, coins, daily check-in progress, challenge participation, your virtual cash balance, and your history of point conversions and redemption requests. Points may be converted to a real cash balance only at fixed, pre-set conversion rates that we control — this process does not involve chance, randomness, or a "scratch card" style outcome. When you submit a redemption request, you choose an amount from your cash balance and provide an email address, to which we (or a partner we work with to fulfil the request) send a redeemable gift-card code once your request has been manually reviewed and approved. We collect and retain this information in order to process your request.</p>
 
       <h3>Referral Data</h3>
-      <p>We generate a personal referral code associated with your account and track which users you have referred, so that referral rewards can be correctly credited.</p>
+      <p>We generate a personal referral code associated with your account. When another user redeems your code, we store a record of that referral relationship, including the referred user's name and email address, so that referral rewards can be correctly and fairly credited, and so that we can detect and prevent abusive or circular referral activity between accounts.</p>
 
       <h3>Device, Usage &amp; Advertising Data</h3>
-      <p>We and our third-party advertising partner collect certain device and usage information, including an advertising/device identifier, general app-usage and interaction data, and technical information (such as device model and operating system version), for the purpose of delivering optional rewarded ads and occasional app-open ads, and, where applicable, ad personalization.</p>
+      <p>We and our third-party advertising partner (Google AdMob) collect certain device and usage information, including an advertising/device identifier, general app-usage and interaction data, and technical information (such as device model and operating system version), for the purpose of delivering optional rewarded ads and occasional app-open ads, and, where applicable, ad personalization.</p>
 
-      <h3>Notification Data</h3>
-      <p>If you grant notification permission, the App may send you local notifications, such as streak reminders. We do not need to collect additional personal information beyond the permission itself to deliver these local notifications.</p>
+      <h3>Settings &amp; Notification Data</h3>
+      <p>Preferences such as dark mode, and whether you want notifications, daily reminders, reward reminders, or security alerts, are stored locally on your device and are not shared with third parties. If you grant notification permission, the App may send you local notifications, such as streak or check-in reminders, generated on your device.</p>
       <a class="back-to-top" href="#top">↑ Back to contents</a>
     </section>
 
@@ -445,7 +448,21 @@
         Step and activity data collected by the App is used <strong>exclusively</strong> to calculate the in-app rewards (points and coins) you earn from walking. It is not used, analyzed, or repurposed for any medical, diagnostic, or health-monitoring purpose.
       </div>
       <p>We do not sell your step or activity data. We do not share this data with insurers, employers, healthcare providers, or any third party for purposes unrelated to operating the App's reward system. The App and its underlying sensors are not a medical device and are not intended to diagnose, treat, monitor, or manage any medical condition.</p>
-      <p>You may stop the collection of step and activity data at any time by revoking the App's activity-recognition or Health Connect permission through your device settings, or by disabling background tracking within the App, though doing so will prevent you from earning further step-based rewards. You may also request deletion of your historical step and activity data by contacting us using the details in the Contact Us section.</p>
+      <p>You may stop the collection of step and activity data at any time by revoking the App's activity-recognition or Health Connect permission through your device settings, though doing so will prevent you from earning further step-based rewards. You may also request deletion of your historical step and activity data by contacting us using the details in the Contact Us section.</p>
+      <a class="back-to-top" href="#top">↑ Back to contents</a>
+    </section>
+
+    <section class="numbered" id="app-download-data">
+      <h2>"Earn" Task Verification Data</h2>
+      <p>The App includes an optional "Earn" section where you can complete simple tasks — such as downloading a partner app and opening it for a short period of time — in exchange for a fixed point reward. To verify that a task has genuinely been completed, and only when you choose to attempt such a task, the App performs two checks directly on your device:</p>
+      <ul>
+        <li>It checks, using Android's standard package manager, whether the specific app named in the task is installed on your device.</li>
+        <li>If you separately grant the optional, OS-level "Usage Access" permission, it checks how long that specific app was open in the foreground, using Android's built-in usage-statistics feature.</li>
+      </ul>
+      <div class="callout">
+        Both of these checks happen entirely on your device. We do <strong>not</strong> transmit, collect, or store the list of apps installed on your device, or your general app-usage statistics, on our servers. The only information sent to us is whether you successfully completed a specific task you chose to attempt, so that the associated point reward can be credited to your account.
+      </div>
+      <p>Granting "Usage Access" is entirely optional and is only needed if you want to complete tasks of this kind; you can decline or later revoke this permission through your device settings, which will simply mean you cannot claim the "open the app" step of these specific tasks.</p>
       <a class="back-to-top" href="#top">↑ Back to contents</a>
     </section>
 
@@ -453,13 +470,13 @@
       <h2>How We Use Your Information</h2>
       <ul>
         <li>To create, authenticate, and maintain your App account.</li>
-        <li>To calculate step-based points and coins, and to operate check-ins, scratch cards, and other reward mechanics.</li>
-        <li>To process and review redemption/payout requests, including verifying the details you submit.</li>
-        <li>To operate the referral program and credit referral rewards.</li>
-        <li>To display which cash-out destinations are relevant to your country/region.</li>
+        <li>To calculate step-based points and coins, and to operate daily check-ins, step challenges, and other reward mechanics.</li>
+        <li>To operate the fixed-rate points-to-cash conversion feature, and to process and review redemption requests, including verifying the details you submit.</li>
+        <li>To operate the referral program and credit referral rewards, and to detect and prevent referral abuse.</li>
+        <li>To verify completion of optional "Earn" tasks and credit the associated rewards.</li>
+        <li>To enforce a limit on the number of accounts associated with a single device, and to otherwise detect, investigate, and prevent fraud and abuse.</li>
         <li>To deliver optional rewarded ads and app-open ads, and to measure their performance.</li>
-        <li>To send local notifications you have permitted, such as streak reminders.</li>
-        <li>To detect, investigate, and prevent fraud, abuse, and violations of our Terms and Conditions.</li>
+        <li>To send local notifications you have permitted, such as streak or check-in reminders.</li>
         <li>To maintain, secure, and improve the App's functionality and performance.</li>
         <li>To communicate with you regarding your account, support requests, or material changes to our policies.</li>
       </ul>
@@ -470,8 +487,8 @@
       <h2>Third-Party Services We Use</h2>
       <p>The App relies on a small number of third-party service providers to function:</p>
       <ul>
-        <li><strong>Authentication &amp; Cloud Backend Provider:</strong> We use a cloud-based authentication and database backend (a Firebase/Firestore-style service) to sign you in and to store your profile and reward data securely.</li>
-        <li><strong>Advertising SDK:</strong> The App integrates a third-party mobile advertising SDK (such as Google AdMob) to deliver optional rewarded ads and app-open ads. This SDK may collect an advertising/device identifier for ad delivery and, where permitted, ad personalization.</li>
+        <li><strong>Authentication, Database &amp; Storage Provider:</strong> We use Google Firebase (Authentication, Firestore, and Cloud Storage) to sign you in and to store your profile, reward data, and any uploaded profile picture securely.</li>
+        <li><strong>Advertising SDK:</strong> The App integrates Google AdMob to deliver optional rewarded ads and app-open ads. This SDK may collect an advertising/device identifier for ad delivery and, where permitted, ad personalization.</li>
         <li><strong>Device Activity Platform:</strong> Where supported, the App reads step data through Android's Health Connect platform, which is governed by its own permission controls on your device.</li>
       </ul>
       <p>These providers process data on our behalf and are contractually or technically restricted from using your information for purposes unrelated to providing their service to us, except as described in this Policy. We do not control the independent privacy practices of the app marketplace you downloaded this app from; please review that marketplace's own privacy terms separately.</p>
@@ -483,7 +500,7 @@
       <p><strong>We do not sell your personal data.</strong> We share information only in the following limited circumstances:</p>
       <ul>
         <li>With service providers (such as our cloud backend and advertising SDK provider) who process data on our behalf strictly to operate the App.</li>
-        <li>With supported redemption partners (such as mobile-wallet providers or payment-processing services) solely to the extent necessary to fulfill a redemption request you have submitted.</li>
+        <li>To the extent necessary to fulfil a redemption request you have submitted — for example, if we need to purchase or issue a gift-card code through a retailer or partner in order to deliver it to the email address you provided.</li>
         <li>Where required to comply with applicable law, legal process, or governmental request.</li>
         <li>To protect the rights, property, or safety of RH Studio PK, our users, or the public, including to investigate fraud or violations of our Terms.</li>
         <li>In connection with a merger, acquisition, or transfer of business assets, subject to continued protection of your data under a policy at least as protective as this one.</li>
@@ -493,7 +510,7 @@
 
     <section class="numbered" id="retention">
       <h2>Data Retention</h2>
-      <p>We retain your account, reward, and redemption data for as long as your account remains active, and for a reasonable period afterward as needed to resolve disputes, enforce our Terms, prevent fraud, and comply with legal obligations. If you request account or data deletion, we will delete or anonymize your personal information within a reasonable timeframe, except where retention is required by law or for legitimate record-keeping related to completed transactions.</p>
+      <p>We retain your account, reward, and redemption data for as long as your account remains active, and for a reasonable period afterward as needed to resolve disputes, enforce our Terms, prevent fraud, and comply with legal obligations. Some records — such as point-conversion, redemption, referral, and challenge-claim history — are kept as an immutable audit trail even after other changes to your account, for fraud-prevention and record-keeping purposes. If you request account deletion, we will delete your account and profile document within a reasonable timeframe, except where retention of specific transaction records is required by law or for legitimate audit purposes related to completed transactions.</p>
       <a class="back-to-top" href="#top">↑ Back to contents</a>
     </section>
 
@@ -507,9 +524,9 @@
       <h2>Your Rights &amp; Choices</h2>
       <ul>
         <li><strong>Access &amp; Correction:</strong> You may request a copy of the personal information we hold about you, or ask us to correct inaccurate information, by contacting us using the details in the Contact Us section.</li>
-        <li><strong>Account &amp; Data Deletion:</strong> You may request deletion of your account and associated personal data at any time by emailing us. We will process such requests within a reasonable timeframe, subject to any legal retention requirements.</li>
+        <li><strong>Account &amp; Data Deletion:</strong> You may delete your account directly from within the App, or by emailing us. We will process such requests within a reasonable timeframe, subject to any legal retention requirements.</li>
         <li><strong>Ad Personalization:</strong> You can generally limit ad tracking and personalization through your device's ad-settings (for example, by resetting or limiting your advertising identifier).</li>
-        <li><strong>Permission Controls:</strong> You may revoke activity-recognition, notification, or other permissions at any time through your device settings, which may limit certain App features.</li>
+        <li><strong>Permission Controls:</strong> You may revoke activity-recognition, notification, Usage Access, or other permissions at any time through your device settings, which may limit certain App features.</li>
       </ul>
       <a class="back-to-top" href="#top">↑ Back to contents</a>
     </section>
@@ -546,7 +563,7 @@
     <section class="numbered" id="disclaimer">
       <h2>Legal Disclaimer</h2>
       <div class="disclaimer">
-        This Privacy Policy is provided as a general template and does not constitute legal advice. It has been drafted to reflect the features of StepReward: Walk &amp; Rewards as described by the developer, but laws and regulatory requirements vary by jurisdiction and change over time. RH Studio PK should have this document reviewed by a qualified lawyer familiar with the laws of Pakistan (and any other jurisdiction in which the App is offered) before relying on it as a final, legally binding policy.
+        This Privacy Policy is provided as a general template and does not constitute legal advice. It has been drafted to reflect the features of StepReward: Walk &amp; Rewards as they currently exist in the app, but laws and regulatory requirements vary by jurisdiction and change over time. RH Studio PK should have this document reviewed by a qualified lawyer familiar with the laws of Pakistan (and any other jurisdiction in which the App is offered) before relying on it as a final, legally binding policy.
       </div>
     </section>
 
