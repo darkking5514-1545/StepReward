@@ -6,572 +6,323 @@
 <title>Privacy Policy — StepReward: Walk &amp; Rewards</title>
 <style>
   :root {
-    --ink: #10201b;
-    --ink-soft: #4b5b54;
-    --ink-faint: #7c887f;
-    --paper: #f6f7f3;
-    --panel: #ffffff;
-    --line: #dde3dd;
-    --accent: #146356;
-    --accent-bright: #1c8a74;
-    --accent-wash: #e7f0ec;
-    --amber: #a6650a;
-    --amber-wash: #faf1de;
-    --sidebar-w: 268px;
-    --max-w: 1120px;
+    --navy: #0B1E44;
+    --navy-deep: #040E24;
+    --green: #1FAE6B;
+    --green-bright: #22C57E;
+    --ink: #1C2433;
+    --muted: #5B6472;
+    --line: #E4E8EE;
+    --bg: #FAFBFC;
+    --card: #FFFFFF;
   }
-
   * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-
   body {
     margin: 0;
-    background: var(--paper);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
     color: var(--ink);
-    font-family: Georgia, 'Times New Roman', serif;
-    line-height: 1.7;
-    font-size: 17px;
-    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
   }
-
-  .topbar {
-    height: 5px;
-    background: linear-gradient(90deg, var(--accent) 0%, var(--accent-bright) 60%, var(--amber) 100%);
+  header.masthead {
+    background: linear-gradient(160deg, var(--navy), var(--navy-deep));
+    color: #fff;
+    padding: 48px 24px 40px;
   }
-
-  .shell {
-    max-width: var(--max-w);
+  .masthead-inner {
+    max-width: 760px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: var(--sidebar-w) 1fr;
-    gap: 48px;
-    padding: 44px 28px 100px;
-    align-items: start;
   }
-
-  /* ---------- Sidebar ---------- */
-  aside.rail {
-    position: sticky;
-    top: 28px;
-  }
-
   .brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 28px;
-  }
-
-  .mark {
-    flex: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: var(--accent);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .mark svg { width: 20px; height: 20px; }
-
-  .brand-name {
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
     font-weight: 700;
-    font-size: 15px;
-    letter-spacing: -0.01em;
-    line-height: 1.25;
-    color: var(--ink);
-  }
-
-  .brand-name span {
-    display: block;
-    font-weight: 400;
-    font-size: 12px;
-    color: var(--ink-faint);
-    margin-top: 1px;
-  }
-
-  details.toc {
-    border-top: 1px solid var(--line);
-    padding-top: 18px;
-  }
-
-  details.toc summary {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    color: var(--ink-faint);
-    cursor: pointer;
-    list-style: none;
+    letter-spacing: 0.02em;
+    color: var(--green-bright);
     margin-bottom: 14px;
   }
-  details.toc summary::-webkit-details-marker { display: none; }
-  details.toc summary::after {
-    content: '';
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    border-right: 1.5px solid var(--ink-faint);
-    border-bottom: 1.5px solid var(--ink-faint);
-    transform: rotate(45deg);
-    margin-left: 6px;
-    transition: transform 0.15s ease;
+  h1.title {
+    font-size: 30px;
+    margin: 0 0 8px;
+    font-weight: 800;
+    line-height: 1.25;
   }
-  details.toc[open] summary::after { transform: rotate(-135deg); }
-
-  .toc ol {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    counter-reset: toc;
-  }
-
-  .toc li {
-    counter-increment: toc;
-    margin-bottom: 2px;
-  }
-
-  .toc a {
-    display: flex;
-    gap: 10px;
-    align-items: baseline;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 13.5px;
-    color: var(--ink-soft);
-    text-decoration: none;
-    padding: 6px 8px;
-    border-radius: 5px;
-  }
-
-  .toc a::before {
-    content: counter(toc, decimal-leading-zero);
-    font-variant-numeric: tabular-nums;
-    color: var(--accent);
-    font-size: 11.5px;
-    font-weight: 700;
-    flex: none;
-  }
-
-  .toc a:hover { background: var(--accent-wash); color: var(--ink); }
-
-  .sibling-doc {
-    margin-top: 22px;
-    padding-top: 18px;
-    border-top: 1px solid var(--line);
-  }
-
-  .sibling-doc a {
-    display: block;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
-    color: var(--accent);
-    text-decoration: none;
-    padding: 12px 14px;
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    background: var(--panel);
-  }
-  .sibling-doc a:hover { border-color: var(--accent); }
-  .sibling-doc .eyebrow {
-    display: block;
-    color: var(--ink-faint);
-    font-size: 11px;
-    margin-bottom: 3px;
-  }
-
-  /* ---------- Main content ---------- */
-  main { min-width: 0; }
-
-  header.doc-header {
-    margin-bottom: 8px;
-  }
-
-  header.doc-header h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    font-size: 40px;
-    letter-spacing: -0.02em;
-    line-height: 1.12;
-    margin: 0 0 10px;
-  }
-
-  header.doc-header .sub {
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--ink-soft);
-    font-size: 15.5px;
-    margin: 0 0 18px;
-  }
-
-  .stamp {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 12.5px;
-    letter-spacing: 0.02em;
-    color: var(--accent);
-    border: 1px solid var(--accent);
-    border-radius: 5px;
-    padding: 5px 11px;
-  }
-
-  hr.rule {
-    border: none;
-    border-top: 1px solid var(--line);
-    margin: 32px 0 8px;
-  }
-
-  section.numbered {
-    counter-increment: section;
-    padding-top: 34px;
-    margin-bottom: 6px;
-  }
-
-  section.numbered + section.numbered {
-    border-top: 1px solid var(--line);
-  }
-
-  section.numbered h2 {
-    display: flex;
-    align-items: baseline;
-    gap: 14px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    font-size: 22px;
-    letter-spacing: -0.01em;
-    margin: 0 0 18px;
-  }
-
-  section.numbered h2::before {
-    content: counter(section, decimal-leading-zero);
-    font-family: 'Courier New', Courier, monospace;
-    font-variant-numeric: tabular-nums;
-    font-weight: 700;
+  .subtitle {
+    color: #B9CBE8;
     font-size: 15px;
-    color: var(--accent);
-    background: var(--accent-wash);
-    border-radius: 4px;
-    padding: 3px 7px;
+    margin: 0 0 4px;
   }
-
-  h3 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    font-size: 15.5px;
-    color: var(--accent);
-    margin: 24px 0 8px;
+  .updated {
+    color: #8FA3C8;
+    font-size: 13px;
   }
-
-  p { margin: 0 0 15px; }
-
-  ul { margin: 0 0 15px; padding-left: 22px; }
-  li { margin-bottom: 7px; }
-
-  strong { color: var(--ink); }
-  a.inline { color: var(--accent); }
-
-  .callout {
-    background: var(--accent-wash);
-    border-left: 3px solid var(--accent);
-    padding: 15px 18px;
-    border-radius: 0 6px 6px 0;
-    font-size: 15.5px;
-    margin: 0 0 16px;
-  }
-
-  .callout strong { color: var(--accent); }
-
-  .back-to-top {
+  .crosslink {
     display: inline-block;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12.5px;
-    color: var(--ink-faint);
+    margin-top: 18px;
+    color: var(--green-bright);
     text-decoration: none;
-    margin-top: 6px;
+    font-size: 14px;
+    font-weight: 600;
   }
-  .back-to-top:hover { color: var(--accent); }
-
-  .disclaimer {
-    margin-top: 10px;
-    padding: 20px 22px;
-    background: var(--amber-wash);
-    border-left: 3px solid var(--amber);
-    border-radius: 0 6px 6px 0;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 13.5px;
-    color: #5a4326;
-    line-height: 1.65;
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
   }
-
-  .contact-box {
-    font-family: Arial, Helvetica, sans-serif;
-    background: var(--panel);
+  nav.toc {
+    background: var(--card);
     border: 1px solid var(--line);
-    border-radius: 8px;
-    padding: 20px 22px;
-    display: grid;
-    gap: 14px;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 40px;
   }
-  .contact-box .label {
-    color: var(--ink-faint);
-    font-size: 11.5px;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    display: block;
-    margin-bottom: 3px;
+  nav.toc p.toc-label {
+    margin: 0 0 10px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--muted);
   }
-
-  footer.page-footer {
-    margin-top: 54px;
-    padding-top: 22px;
-    border-top: 1px solid var(--line);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12.5px;
-    color: var(--ink-faint);
+  nav.toc ol {
+    margin: 0;
+    padding-left: 20px;
+    columns: 2;
+    column-gap: 24px;
   }
-
-  body { counter-reset: section; }
-
-  @media (max-width: 900px) {
-    .shell {
-      grid-template-columns: 1fr;
-      padding: 28px 20px 70px;
-      gap: 22px;
-    }
-    aside.rail { position: static; }
-    header.doc-header h1 { font-size: 30px; }
+  nav.toc li { margin-bottom: 6px; font-size: 14px; }
+  nav.toc a { color: var(--ink); text-decoration: none; }
+  nav.toc a:hover { color: var(--green); text-decoration: underline; }
+  section { margin-bottom: 36px; }
+  h2 {
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0 0 14px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--line);
+    color: var(--navy);
   }
-
-  @media print {
-    .rail, .back-to-top, .topbar { display: none; }
-    .shell { display: block; padding: 0; }
-    body { background: #fff; }
+  h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 20px 0 8px;
+  }
+  p { margin: 0 0 14px; color: var(--ink); }
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 8px; }
+  strong { color: var(--navy); }
+  a { color: var(--green); }
+  .back-link {
+    display: inline-block;
+    font-size: 13px;
+    color: var(--muted);
+    text-decoration: none;
+    margin-top: 4px;
+  }
+  .back-link:hover { color: var(--green); }
+  .contact-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 20px 24px;
+  }
+  .contact-row { display: flex; gap: 8px; margin-bottom: 10px; font-size: 14px; }
+  .contact-row span.label { color: var(--muted); min-width: 130px; }
+  .disclaimer {
+    background: #FFF8EC;
+    border: 1px solid #F3DFB6;
+    border-radius: 12px;
+    padding: 18px 22px;
+    font-size: 13px;
+    color: #6B5312;
+  }
+  footer {
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+    padding: 0 24px 40px;
   }
 </style>
 </head>
 <body>
-<div class="topbar"></div>
-<div class="shell">
 
-  <aside class="rail">
-    <div class="brand">
-      <div class="mark">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 3.5C9 3.5 7 5.7 7 8.2c0 3.3 3.4 5.8 5 9.3 1.6-3.5 5-6 5-9.3 0-2.5-2-4.7-5-4.7Z" stroke="#f6f7f3" stroke-width="1.4"/>
-          <circle cx="12" cy="8.4" r="1.6" fill="#f6f7f3"/>
-        </svg>
-      </div>
-      <div class="brand-name">StepReward
-        <span>Walk &amp; Rewards</span>
-      </div>
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="brand">StepReward · Walk &amp; Rewards</div>
+    <h1 class="title">Privacy Policy</h1>
+    <p class="subtitle">How StepReward: Walk &amp; Rewards collects, uses, and protects your information.</p>
+    <p class="updated">Last updated · September 12, 2026</p>
+    <a class="crosslink" href="./terms-and-conditions.html">Read our Terms &amp; Conditions →</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <nav class="toc" aria-label="Table of contents">
+    <p class="toc-label">On this page</p>
+    <ol>
+      <li><a href="#introduction">Introduction &amp; Scope</a></li>
+      <li><a href="#information-we-collect">Information We Collect</a></li>
+      <li><a href="#health-fitness">Health &amp; Fitness Data</a></li>
+      <li><a href="#how-we-use">How We Use Your Information</a></li>
+      <li><a href="#third-party">Third-Party Services We Use</a></li>
+      <li><a href="#how-we-share">How We Share Information</a></li>
+      <li><a href="#retention">Data Retention</a></li>
+      <li><a href="#security">Data Security</a></li>
+      <li><a href="#your-rights">Your Rights &amp; Choices</a></li>
+      <li><a href="#children">Children's Privacy</a></li>
+      <li><a href="#international">International Data Transfers</a></li>
+      <li><a href="#changes">Changes to This Privacy Policy</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+      <li><a href="#disclaimer">Legal Disclaimer</a></li>
+    </ol>
+  </nav>
+
+  <section id="introduction">
+    <h2>Introduction &amp; Scope</h2>
+    <p>RH Studio PK ("we," "us," "our," or "the developer") is an independent developer based in Pakistan that publishes and operates the mobile application <strong>StepReward: Walk &amp; Rewards</strong> (the "App"). This Privacy Policy explains what information we collect when you use the App, how we use and share that information, and the choices and rights available to you.</p>
+    <p>The App is made available to users worldwide. By downloading, installing, or using the App, you agree to the collection and use of information in accordance with this Privacy Policy. If you do not agree with this policy, please do not use the App.</p>
+    <a class="back-link" href="#top">↑ Back to contents</a>
+  </section>
+
+  <section id="information-we-collect">
+    <h2>Information We Collect</h2>
+
+    <h3>Account Information</h3>
+    <p>You can create and sign in to your App account in one of two ways: (a) using a Google account through Firebase Authentication / Google Sign-In, which shares your name, email address, and profile photo from your Google account with the App; or (b) using an email address and a password you create, in which case your password is handled directly by Firebase Authentication and is never visible to us in readable form. We use this information solely to create, authenticate, and manage your in-app account.</p>
+
+    <h3>Profile Information</h3>
+    <p>During onboarding, we ask you to provide your date of birth and your country. We also automatically detect your device's timezone to support features such as daily check-ins and streaks. If you choose to, you may upload a profile picture, which is stored on our cloud storage provider and linked to your account.</p>
+
+    <h3>Device &amp; Anti-Fraud Information</h3>
+    <p>To protect the integrity of our reward system and prevent abuse, we automatically collect a device identifier (Android's built-in device ID) and your device's public IP address when you sign up or sign in. This information is used to enforce a limit on the number of accounts that may be associated with a single physical device, and to detect and block fraudulent referral activity (for example, referrals between accounts that share the same device or the same network).</p>
+
+    <h3>Step &amp; Activity Data</h3>
+    <p>The App reads step-count data from your device's built-in step sensor and/or, where available, the Android Health Connect platform, which requires activity-recognition permission. A background/foreground tracking service (which may continue running after a device restart) records your step activity so that steps can be converted into in-app points. Your recent step history is stored primarily on your own device, and a summary is periodically synced to our servers so your points, totals, and daily/weekly progress stay up to date across sessions. See the Health &amp; Fitness Data section below for more detail on how this data is used and your rights over it.</p>
+
+    <h3>Rewards, Transaction &amp; Redemption Data</h3>
+    <p>We collect and store data related to your in-app economy, including points, coins, daily check-in progress, challenge participation, your virtual cash balance, and your history of point conversions and redemption requests. Points may be converted to a real cash balance only at fixed, pre-set conversion rates that we control — this process does not involve chance, randomness, or a "scratch card" style outcome. When you submit a redemption request, you choose an amount from your cash balance and provide an email address, to which we (or a partner we work with to fulfil the request) send a redeemable gift-card code once your request has been manually reviewed and approved. We collect and retain this information in order to process your request.</p>
+
+    <h3>Referral Data</h3>
+    <p>We generate a personal referral code associated with your account. When another user redeems your code, we store a record of that referral relationship, including the referred user's name and email address, so that referral rewards can be correctly and fairly credited, and so that we can detect and prevent abusive or circular referral activity between accounts.</p>
+
+    <h3>Device, Usage &amp; Advertising Data</h3>
+    <p>We and our third-party advertising partner (Google AdMob) collect certain device and usage information, including an advertising/device identifier, general app-usage and interaction data, and technical information (such as device model and operating system version), for the purpose of delivering optional rewarded ads and occasional app-open ads, and, where applicable, ad personalization.</p>
+
+    <h3>Settings &amp; Notification Data</h3>
+    <p>Preferences such as dark mode, and whether you want notifications, daily reminders, reward reminders, or security alerts, are stored locally on your device and are not shared with third parties. If you grant notification permission, the App may send you local notifications, such as streak or check-in reminders, generated on your device.</p>
+
+    <a class="back-link" href="#top">↑ Back to contents</a>
+  </section>
+
+  <section id="health-fitness">
+    <h2>Health &amp; Fitness Data</h2>
+    <p>Step and activity data collected by the App is used <strong>exclusively</strong> to calculate the in-app rewards (points and coins) you earn from walking. It is not used, analyzed, or repurposed for any medical, diagnostic, or health-monitoring purpose.</p>
+    <p>We do not sell your step or activity data. We do not share this data with insurers, employers, healthcare providers, or any third party for purposes unrelated to operating the App's reward system. The App and its underlying sensors are not a medical device and are not intended to diagnose, treat, monitor, or manage any medical condition.</p>
+    <p>You may stop the collection of step and activity data at any time by revoking the App's activity-recognition or Health Connect permission through your device settings, though doing so will prevent you from earning further step-based rewards. You may also request deletion of your historical step and activity data by contacting us using the details in the Contact Us section.</p>
+    <a class="back-link" href="#top">↑ Back to contents</a>
+  </section>
+
+  <section id="how-we-use">
+    <h2>How We Use Your Information</h2>
+    <ul>
+      <li>To create, authenticate, and maintain your App account.</li>
+      <li>To calculate step-based points and coins, and to operate daily check-ins, step challenges, and other reward mechanics.</li>
+      <li>To operate the fixed-rate points-to-cash conversion feature, and to process and review redemption requests, including verifying the details you submit.</li>
+      <li>To operate the referral program and credit referral rewards, and to detect and prevent referral abuse.</li>
+      <li>To enforce a limit on the number of accounts associated with a single device, and to otherwise detect, investigate, and prevent fraud and abuse.</li>
+      <li>To deliver optional rewarded ads and app-open ads, and to measure their performance.</li>
+      <li>To send local notifications you have permitted, such as streak or check-in reminders.</li>
+      <li>To maintain, secure, and improve the App's functionality and performance.</li>
+      <li>To communicate with you regarding your account, support requests, or material changes to our policies.</li>
+    </ul>
+    <a class="back-link" href="#top">↑ Back to contents</a>
+  </section>
+
+  <section id="third-party">
+    <h2>Third-Party Services We Use</h2>
+    <p>The App relies on a small number of third-party service providers to function:</p>
+    <ul>
+      <li><strong>Authentication, Database &amp; Storage Provider:</strong> We use Google Firebase (Authentication, Firestore, and Cloud Storage) to sign you in and to store your profile, reward data, and any uploaded profile picture securely.</li>
+      <li><strong>Advertising SDK:</strong> The App integrates Google AdMob to deliver optional rewarded ads and app-open ads. This SDK may collect an advertising/device identifier for ad delivery and, where permitted, ad personalization.</li>
+      <li><strong>Device Activity Platform:</strong> Where supported, the App reads step data through Android's Health Connect platform, which is governed by its own permission controls on your device.</li>
+    </ul>
+    <p>These providers process data on our behalf and are contractually or technically restricted from using your information for purposes unrelated to providing their service to us, except as described in this Policy. We do not control the independent privacy practices of the app marketplace you downloaded this app from; please review that marketplace's own privacy terms separately.</p>
+    <a class="back-link" href="#top">↑ Back to contents</a>
+  </section>
+
+  <section id="how-we-share">
+    <h2>How We Share Information</h2>
+    <p><strong>We do not sell your personal data.</strong> We share information only in the following limited circumstances:</p>
+    <ul>
+      <li>With service providers (such as our cloud backend and advertising SDK provider) who process data on our behalf strictly to operate the App.</li>
+      <li>To the extent necessary to fulfil a redemption request you have submitted — for example, if we need to purchase or issue a gift-card code through a retailer or partner in order to deliver it to the email address you provided.</li>
+      <li>Where required to comply with applicable law, legal process, or governmental request.</li>
+      <li>To protect the rights, property, or safety of RH Studio PK, our users, or the public, including to investigate fraud or violations of our Terms.</li>
+      <li>In connection with a merger, acquisition, or transfer of business assets, subject to continued protection of your data under a policy at least as protective as this one.</li>
+    </ul>
+    <a class="back-link" href="#top">↑ Back to contents</a>
+  </section>
+
+  <section id="retention">
+    <h2>Data Retention</h2>
+    <p>We retain your account, reward, and redemption data for as long as your account remains active, and for a reasonable period afterward as needed to resolve disputes, enforce our Terms, prevent fraud, and comply with legal obligations. Some records — such as point-conversion, redemption, referral, and challenge-claim history — are kept as an immutable audit trail even after other changes to your account, for fraud-prevention and record-keeping purposes. If you request account deletion, we will delete your account and profile document within a reasonable timeframe, except where retention of specific transaction records is required by law or for legitimate audit purposes related to completed transactions.</p>
+    <a class="back-link" href="#top">↑ Back to contents</a>
+  </section>
+
+  <section id="security">
+    <h2>Data Security</h2>
+    <p>We use reasonable administrative, technical, and organizational safeguards designed to protect your information from unauthorized access, alteration, disclosure, or destruction, including secure cloud infrastructure and access controls on our backend. However, no method of electronic storage or transmission is completely secure, and we cannot guarantee absolute security of your data.</p>
+    <a class="back-link" href="#top">↑ Back to contents</a>
+  </section>
+
+  <section id="your-rights">
+    <h2>Your Rights &amp; Choices</h2>
+    <ul>
+      <li><strong>Access &amp; Correction:</strong> You may request a copy of the personal information we hold about you, or ask us to correct inaccurate information, by contacting us using the details in the Contact Us section.</li>
+      <li><strong>Account &amp; Data Deletion:</strong> You may delete your account directly from within the App, or by emailing us. We will process such requests within a reasonable timeframe, subject to any legal retention requirements.</li>
+      <li><strong>Ad Personalization:</strong> You can generally limit ad tracking and personalization through your device's ad-settings (for example, by resetting or limiting your advertising identifier).</li>
+      <li><strong>Permission Controls:</strong> You may revoke activity-recognition, notification, or other permissions at any time through your device settings, which may limit certain App features.</li>
+    </ul>
+    <a class="back-link" href="#top">↑ Back to contents</a>
+  </section>
+
+  <section id="children">
+    <h2>Children's Privacy</h2>
+    <p>The App is not directed at, and is not intended for use by, children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have inadvertently collected personal information from a child under 13, we will take reasonable steps to promptly delete that information from our systems. If you believe a child under 13 has provided us with personal information, please contact us using the details in the Contact Us section.</p>
+    <a class="back-link" href="#top">↑ Back to contents</a>
+  </section>
+
+  <section id="international">
+    <h2>International Data Transfers</h2>
+    <p>Our cloud backend and other service providers may store or process data on servers located outside of Pakistan. By using the App, you understand that your information may be transferred to, and processed in, countries other than your own, which may have different data protection laws. We take reasonable steps to ensure your information continues to receive an adequate level of protection wherever it is processed.</p>
+    <a class="back-link" href="#top">↑ Back to contents</a>
+  </section>
+
+  <section id="changes">
+    <h2>Changes to This Privacy Policy</h2>
+    <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. We will update the "Last Updated" date at the top of this page whenever changes are made, and, where changes are material, we will make reasonable efforts to notify you (for example, via an in-app notice). Your continued use of the App after any update constitutes acceptance of the revised Policy.</p>
+    <a class="back-link" href="#top">↑ Back to contents</a>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>If you have questions, concerns, or requests regarding this Privacy Policy or your personal information, please contact us:</p>
+    <div class="contact-card">
+      <div class="contact-row"><span class="label">Developer</span><span>RH Studio PK</span></div>
+      <div class="contact-row"><span class="label">Support Email</span><span><a href="mailto:riderhunter301@gmail.com">riderhunter301@gmail.com</a></span></div>
+      <div class="contact-row"><span class="label">Official Website</span><span><a href="https://rhstudio.rf.gd">https://rhstudio.rf.gd</a></span></div>
     </div>
+    <a class="back-link" href="#top">↑ Back to contents</a>
+  </section>
 
-    <details class="toc" open>
-      <summary>On this page</summary>
-      <ol id="top">
-        <li><a href="#introduction">Introduction &amp; Scope</a></li>
-        <li><a href="#information-we-collect">Information We Collect</a></li>
-        <li><a href="#health-fitness">Health &amp; Fitness Data</a></li>
-        <li><a href="#app-download-data">"Earn" Task Verification Data</a></li>
-        <li><a href="#how-we-use">How We Use Your Information</a></li>
-        <li><a href="#third-party">Third-Party Services We Use</a></li>
-        <li><a href="#how-we-share">How We Share Information</a></li>
-        <li><a href="#retention">Data Retention</a></li>
-        <li><a href="#security">Data Security</a></li>
-        <li><a href="#your-rights">Your Rights &amp; Choices</a></li>
-        <li><a href="#children">Children's Privacy</a></li>
-        <li><a href="#international">International Data Transfers</a></li>
-        <li><a href="#changes">Changes to This Privacy Policy</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-        <li><a href="#disclaimer">Legal Disclaimer</a></li>
-      </ol>
-    </details>
-
-    <div class="sibling-doc">
-      <a href="terms-and-conditions.html">
-        <span class="eyebrow">Also read</span>
-        Terms &amp; Conditions →
-      </a>
+  <section id="disclaimer">
+    <h2>Legal Disclaimer</h2>
+    <div class="disclaimer">
+      This Privacy Policy is provided as a general template and does not constitute legal advice. It has been drafted to reflect the features of StepReward: Walk &amp; Rewards as they currently exist in the app, but laws and regulatory requirements vary by jurisdiction and change over time. RH Studio PK should have this document reviewed by a qualified lawyer familiar with the laws of Pakistan (and any other jurisdiction in which the App is offered) before relying on it as a final, legally binding policy.
     </div>
-  </aside>
+  </section>
 
-  <main>
-    <header class="doc-header">
-      <h1>Privacy Policy</h1>
-      <p class="sub">How StepReward: Walk &amp; Rewards collects, uses, and protects your information.</p>
-      <span class="stamp">Last Updated · September 12, 2026</span>
-    </header>
+</main>
 
-    <hr class="rule">
+<footer>© 2026 RH Studio PK — StepReward: Walk &amp; Rewards. All rights reserved.</footer>
 
-    <section class="numbered" id="introduction">
-      <h2>Introduction &amp; Scope</h2>
-      <p>RH Studio PK ("we," "us," "our," or "the developer") is an independent developer based in Pakistan that publishes and operates the mobile application <strong>StepReward: Walk &amp; Rewards</strong> (the "App"). This Privacy Policy explains what information we collect when you use the App, how we use and share that information, and the choices and rights available to you.</p>
-      <p>The App is made available to users worldwide. By downloading, installing, or using the App, you agree to the collection and use of information in accordance with this Privacy Policy. If you do not agree with this policy, please do not use the App.</p>
-      <a class="back-to-top" href="#top">↑ Back to contents</a>
-    </section>
-
-    <section class="numbered" id="information-we-collect">
-      <h2>Information We Collect</h2>
-
-      <h3>Account Information</h3>
-      <p>You can create and sign in to your App account in one of two ways: (a) using a Google account through Firebase Authentication / Google Sign-In, which shares your name, email address, and profile photo from your Google account with the App; or (b) using an email address and a password you create, in which case your password is handled directly by Firebase Authentication and is never visible to us in readable form. We use this information solely to create, authenticate, and manage your in-app account.</p>
-
-      <h3>Profile Information</h3>
-      <p>During onboarding, we ask you to provide your date of birth and your country. We also automatically detect your device's timezone to support features such as daily check-ins and streaks. If you choose to, you may upload a profile picture, which is stored on our cloud storage provider and linked to your account.</p>
-
-      <h3>Device &amp; Anti-Fraud Information</h3>
-      <p>To protect the integrity of our reward system and prevent abuse, we automatically collect a device identifier (Android's built-in device ID) and your device's public IP address when you sign up or sign in. This information is used to enforce a limit on the number of accounts that may be associated with a single physical device, and to detect and block fraudulent referral activity (for example, referrals between accounts that share the same device or the same network).</p>
-
-      <h3>Step &amp; Activity Data</h3>
-      <p>The App reads step-count data from your device's built-in step sensor and/or, where available, the Android Health Connect platform, which requires activity-recognition permission. A background/foreground tracking service (which may continue running after a device restart) records your step activity so that steps can be converted into in-app points. Your recent step history is stored primarily on your own device, and a summary is periodically synced to our servers so your points, totals, and daily/weekly progress stay up to date across sessions. See the Health &amp; Fitness Data section below for more detail on how this data is used and your rights over it.</p>
-
-      <h3>Rewards, Transaction &amp; Redemption Data</h3>
-      <p>We collect and store data related to your in-app economy, including points, coins, daily check-in progress, challenge participation, your virtual cash balance, and your history of point conversions and redemption requests. Points may be converted to a real cash balance only at fixed, pre-set conversion rates that we control — this process does not involve chance, randomness, or a "scratch card" style outcome. When you submit a redemption request, you choose an amount from your cash balance and provide an email address, to which we (or a partner we work with to fulfil the request) send a redeemable gift-card code once your request has been manually reviewed and approved. We collect and retain this information in order to process your request.</p>
-
-      <h3>Referral Data</h3>
-      <p>We generate a personal referral code associated with your account. When another user redeems your code, we store a record of that referral relationship, including the referred user's name and email address, so that referral rewards can be correctly and fairly credited, and so that we can detect and prevent abusive or circular referral activity between accounts.</p>
-
-      <h3>Device, Usage &amp; Advertising Data</h3>
-      <p>We and our third-party advertising partner (Google AdMob) collect certain device and usage information, including an advertising/device identifier, general app-usage and interaction data, and technical information (such as device model and operating system version), for the purpose of delivering optional rewarded ads and occasional app-open ads, and, where applicable, ad personalization.</p>
-
-      <h3>Settings &amp; Notification Data</h3>
-      <p>Preferences such as dark mode, and whether you want notifications, daily reminders, reward reminders, or security alerts, are stored locally on your device and are not shared with third parties. If you grant notification permission, the App may send you local notifications, such as streak or check-in reminders, generated on your device.</p>
-      <a class="back-to-top" href="#top">↑ Back to contents</a>
-    </section>
-
-    <section class="numbered" id="health-fitness">
-      <h2>Health &amp; Fitness Data</h2>
-      <div class="callout">
-        Step and activity data collected by the App is used <strong>exclusively</strong> to calculate the in-app rewards (points and coins) you earn from walking. It is not used, analyzed, or repurposed for any medical, diagnostic, or health-monitoring purpose.
-      </div>
-      <p>We do not sell your step or activity data. We do not share this data with insurers, employers, healthcare providers, or any third party for purposes unrelated to operating the App's reward system. The App and its underlying sensors are not a medical device and are not intended to diagnose, treat, monitor, or manage any medical condition.</p>
-      <p>You may stop the collection of step and activity data at any time by revoking the App's activity-recognition or Health Connect permission through your device settings, though doing so will prevent you from earning further step-based rewards. You may also request deletion of your historical step and activity data by contacting us using the details in the Contact Us section.</p>
-      <a class="back-to-top" href="#top">↑ Back to contents</a>
-    </section>
-
-    <section class="numbered" id="app-download-data">
-      <h2>"Earn" Task Verification Data</h2>
-      <p>The App includes an optional "Earn" section where you can complete simple tasks — such as downloading a partner app and opening it for a short period of time — in exchange for a fixed point reward. To verify that a task has genuinely been completed, and only when you choose to attempt such a task, the App performs two checks directly on your device:</p>
-      <ul>
-        <li>It checks, using Android's standard package manager, whether the specific app named in the task is installed on your device.</li>
-        <li>If you separately grant the optional, OS-level "Usage Access" permission, it checks how long that specific app was open in the foreground, using Android's built-in usage-statistics feature.</li>
-      </ul>
-      <div class="callout">
-        Both of these checks happen entirely on your device. We do <strong>not</strong> transmit, collect, or store the list of apps installed on your device, or your general app-usage statistics, on our servers. The only information sent to us is whether you successfully completed a specific task you chose to attempt, so that the associated point reward can be credited to your account.
-      </div>
-      <p>Granting "Usage Access" is entirely optional and is only needed if you want to complete tasks of this kind; you can decline or later revoke this permission through your device settings, which will simply mean you cannot claim the "open the app" step of these specific tasks.</p>
-      <a class="back-to-top" href="#top">↑ Back to contents</a>
-    </section>
-
-    <section class="numbered" id="how-we-use">
-      <h2>How We Use Your Information</h2>
-      <ul>
-        <li>To create, authenticate, and maintain your App account.</li>
-        <li>To calculate step-based points and coins, and to operate daily check-ins, step challenges, and other reward mechanics.</li>
-        <li>To operate the fixed-rate points-to-cash conversion feature, and to process and review redemption requests, including verifying the details you submit.</li>
-        <li>To operate the referral program and credit referral rewards, and to detect and prevent referral abuse.</li>
-        <li>To verify completion of optional "Earn" tasks and credit the associated rewards.</li>
-        <li>To enforce a limit on the number of accounts associated with a single device, and to otherwise detect, investigate, and prevent fraud and abuse.</li>
-        <li>To deliver optional rewarded ads and app-open ads, and to measure their performance.</li>
-        <li>To send local notifications you have permitted, such as streak or check-in reminders.</li>
-        <li>To maintain, secure, and improve the App's functionality and performance.</li>
-        <li>To communicate with you regarding your account, support requests, or material changes to our policies.</li>
-      </ul>
-      <a class="back-to-top" href="#top">↑ Back to contents</a>
-    </section>
-
-    <section class="numbered" id="third-party">
-      <h2>Third-Party Services We Use</h2>
-      <p>The App relies on a small number of third-party service providers to function:</p>
-      <ul>
-        <li><strong>Authentication, Database &amp; Storage Provider:</strong> We use Google Firebase (Authentication, Firestore, and Cloud Storage) to sign you in and to store your profile, reward data, and any uploaded profile picture securely.</li>
-        <li><strong>Advertising SDK:</strong> The App integrates Google AdMob to deliver optional rewarded ads and app-open ads. This SDK may collect an advertising/device identifier for ad delivery and, where permitted, ad personalization.</li>
-        <li><strong>Device Activity Platform:</strong> Where supported, the App reads step data through Android's Health Connect platform, which is governed by its own permission controls on your device.</li>
-      </ul>
-      <p>These providers process data on our behalf and are contractually or technically restricted from using your information for purposes unrelated to providing their service to us, except as described in this Policy. We do not control the independent privacy practices of the app marketplace you downloaded this app from; please review that marketplace's own privacy terms separately.</p>
-      <a class="back-to-top" href="#top">↑ Back to contents</a>
-    </section>
-
-    <section class="numbered" id="how-we-share">
-      <h2>How We Share Information</h2>
-      <p><strong>We do not sell your personal data.</strong> We share information only in the following limited circumstances:</p>
-      <ul>
-        <li>With service providers (such as our cloud backend and advertising SDK provider) who process data on our behalf strictly to operate the App.</li>
-        <li>To the extent necessary to fulfil a redemption request you have submitted — for example, if we need to purchase or issue a gift-card code through a retailer or partner in order to deliver it to the email address you provided.</li>
-        <li>Where required to comply with applicable law, legal process, or governmental request.</li>
-        <li>To protect the rights, property, or safety of RH Studio PK, our users, or the public, including to investigate fraud or violations of our Terms.</li>
-        <li>In connection with a merger, acquisition, or transfer of business assets, subject to continued protection of your data under a policy at least as protective as this one.</li>
-      </ul>
-      <a class="back-to-top" href="#top">↑ Back to contents</a>
-    </section>
-
-    <section class="numbered" id="retention">
-      <h2>Data Retention</h2>
-      <p>We retain your account, reward, and redemption data for as long as your account remains active, and for a reasonable period afterward as needed to resolve disputes, enforce our Terms, prevent fraud, and comply with legal obligations. Some records — such as point-conversion, redemption, referral, and challenge-claim history — are kept as an immutable audit trail even after other changes to your account, for fraud-prevention and record-keeping purposes. If you request account deletion, we will delete your account and profile document within a reasonable timeframe, except where retention of specific transaction records is required by law or for legitimate audit purposes related to completed transactions.</p>
-      <a class="back-to-top" href="#top">↑ Back to contents</a>
-    </section>
-
-    <section class="numbered" id="security">
-      <h2>Data Security</h2>
-      <p>We use reasonable administrative, technical, and organizational safeguards designed to protect your information from unauthorized access, alteration, disclosure, or destruction, including secure cloud infrastructure and access controls on our backend. However, no method of electronic storage or transmission is completely secure, and we cannot guarantee absolute security of your data.</p>
-      <a class="back-to-top" href="#top">↑ Back to contents</a>
-    </section>
-
-    <section class="numbered" id="your-rights">
-      <h2>Your Rights &amp; Choices</h2>
-      <ul>
-        <li><strong>Access &amp; Correction:</strong> You may request a copy of the personal information we hold about you, or ask us to correct inaccurate information, by contacting us using the details in the Contact Us section.</li>
-        <li><strong>Account &amp; Data Deletion:</strong> You may delete your account directly from within the App, or by emailing us. We will process such requests within a reasonable timeframe, subject to any legal retention requirements.</li>
-        <li><strong>Ad Personalization:</strong> You can generally limit ad tracking and personalization through your device's ad-settings (for example, by resetting or limiting your advertising identifier).</li>
-        <li><strong>Permission Controls:</strong> You may revoke activity-recognition, notification, Usage Access, or other permissions at any time through your device settings, which may limit certain App features.</li>
-      </ul>
-      <a class="back-to-top" href="#top">↑ Back to contents</a>
-    </section>
-
-    <section class="numbered" id="children">
-      <h2>Children's Privacy</h2>
-      <p>The App is not directed at, and is not intended for use by, children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have inadvertently collected personal information from a child under 13, we will take reasonable steps to promptly delete that information from our systems. If you believe a child under 13 has provided us with personal information, please contact us using the details in the Contact Us section.</p>
-      <a class="back-to-top" href="#top">↑ Back to contents</a>
-    </section>
-
-    <section class="numbered" id="international">
-      <h2>International Data Transfers</h2>
-      <p>Our cloud backend and other service providers may store or process data on servers located outside of Pakistan. By using the App, you understand that your information may be transferred to, and processed in, countries other than your own, which may have different data protection laws. We take reasonable steps to ensure your information continues to receive an adequate level of protection wherever it is processed.</p>
-      <a class="back-to-top" href="#top">↑ Back to contents</a>
-    </section>
-
-    <section class="numbered" id="changes">
-      <h2>Changes to This Privacy Policy</h2>
-      <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. We will update the "Last Updated" date at the top of this page whenever changes are made, and, where changes are material, we will make reasonable efforts to notify you (for example, via an in-app notice). Your continued use of the App after any update constitutes acceptance of the revised Policy.</p>
-      <a class="back-to-top" href="#top">↑ Back to contents</a>
-    </section>
-
-    <section class="numbered" id="contact">
-      <h2>Contact Us</h2>
-      <p>If you have questions, concerns, or requests regarding this Privacy Policy or your personal information, please contact us:</p>
-      <div class="contact-box">
-        <div><span class="label">Developer</span>RH Studio PK</div>
-        <div><span class="label">Support Email</span><a class="inline" href="mailto:riderhunter301@gmail.com">riderhunter301@gmail.com</a></div>
-        <div><span class="label">Official Website</span><a class="inline" href="https://rhstudio.rh.gd">https://rhstudio.rh.gd</a></div>
-      </div>
-      <a class="back-to-top" href="#top">↑ Back to contents</a>
-    </section>
-
-    <section class="numbered" id="disclaimer">
-      <h2>Legal Disclaimer</h2>
-      <div class="disclaimer">
-        This Privacy Policy is provided as a general template and does not constitute legal advice. It has been drafted to reflect the features of StepReward: Walk &amp; Rewards as they currently exist in the app, but laws and regulatory requirements vary by jurisdiction and change over time. RH Studio PK should have this document reviewed by a qualified lawyer familiar with the laws of Pakistan (and any other jurisdiction in which the App is offered) before relying on it as a final, legally binding policy.
-      </div>
-    </section>
-
-    <footer class="page-footer">
-      © 2026 RH Studio PK — StepReward: Walk &amp; Rewards. All rights reserved.
-    </footer>
-  </main>
-
-</div>
 </body>
 </html>
